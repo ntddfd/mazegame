@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tìm đường đi trên mê cung</title>
+  <link rel="stylesheet" href="style.css">
+
+</head> 
+
+<body>
+
+<h1>TÌM ĐƯỜNG ĐI TRÊN MÊ CUNG</h1>
+
+<div class="container">
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <label>Số hàng</label>
+    <input type="number" id="rows" value="15" min="5" max="40">
+
+    <label>Số cột</label>
+    <input type="number" id="cols" value="25" min="5" max="60">
+
+    <button onclick="createMaze()">Tạo mê cung</button>
+
+    <label>Chế độ vẽ</label>
+    <div class="mode-buttons" id="drawModes">
+      <button onclick="setMode('wall', this)">Vẽ tường</button>
+      <button onclick="setMode('start', this)">Đặt Start</button>
+      <button onclick="setMode('end', this)">Đặt End</button>
+    </div>
+
+    <label>Thuật toán</label>
+    <div id="algoButtons">
+      <button onclick="run('BFS', this)">BFS</button>
+      <button onclick="run('DFS', this)">DFS</button>
+      <button onclick="run('GREEDY', this)">Greedy</button>
+      <button onclick="run('ASTAR', this)">A*</button>
+    </div>
+
+    <button onclick="resetAll()">Reset</button>
+  </div>
+
+  <!-- MAZE -->
+  <div class="maze-wrapper">
+    <div id="maze" class="maze"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <h3>Lịch sử so sánh</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Thuật toán</th>
+          <th>Mê cung</th>
+          <th>Time (ms)</th>
+          <th>Node duyệt</th>
+          <th>Độ dài đường đi</th>
+        </tr>
+      </thead>
+      <tbody id="resultTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

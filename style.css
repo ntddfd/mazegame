@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+/* CONTROLS */
+.controls {
+  width: 280px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.controls label {
+  font-weight: bold;
+  margin-top: 8px;
+  display: block;
+}
+
+.controls input,
+.controls button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.mode-buttons button {
+  flex: 1;
+}
+
+/* ACTIVE BUTTON */
+button.active {
+  background: #4dabf7;
+  color: white;
+  font-weight: bold;
+}
+
+/* MAZE */
+.maze-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.maze {
+  display: grid;
+  border: 2px solid #333;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #bbb;
+  background: white;
+}
+
+.cell.wall { background: #333; }
+.cell.start { background: #2ecc71; }
+.cell.end { background: #e74c3c; }
+.cell.visited { background: #74c0fc; }
+.cell.path { background: #f1c40f; }
+
+/* STATS */
+.stats {
+  width: 420px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+}
