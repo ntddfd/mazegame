@@ -104,6 +104,13 @@ button.active.end-btn {
   border: none;
 }
 
+button.active.algo-btn {
+  background: #39719c;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
 #reset-btn {
   background-color: #ff6b6b;
   color: white;

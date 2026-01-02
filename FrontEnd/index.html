@@ -17,37 +17,33 @@
               <label>Số hàng</label>
               <input type="number" id="rows" min="5" max="100" value="20" />
             </div>
-
             <div class="columns">
               <label>Số cột</label>
               <input type="number" id="cols" min="5" max="100" value="20" />
             </div>
           </div>
 
-          <button onclick="createMaze()">Tạo mê cung</button>
+          <button id="createBtn">Tạo mê cung</button>
 
           <label>Chức năng</label>
           <div class="mode-buttons" id="drawModes">
-            <button class="start-btn" onclick="setMode('start', this)">
+            <button class="mode-btn start-btn" data-mode="start">
               Đặt Start
             </button>
-            <button class="end-btn" onclick="setMode('end', this)">
-              Đặt End
-            </button>
-            <button class="wall-btn" onclick="setMode('wall', this)">
-              Vẽ tường
-            </button>
+            <button class="mode-btn end-btn" data-mode="end">Đặt End</button>
+            <button class="mode-btn wall-btn" data-mode="wall">Vẽ tường</button>
           </div>
 
           <label>Thuật toán tìm đường</label>
           <div id="algoButtons">
-            <button onclick="run('BFS', this)">BFS</button>
-            <button onclick="run('DFS', this)">DFS</button>
-            <button onclick="run('GREEDY', this)">Greedy</button>
-            <button onclick="run('ASTAR', this)">A*</button>
+            <button class="algo-btn" data-type="BFS">BFS</button>
+            <button class="algo-btn" data-type="DFS">DFS</button>
+            <button class="algo-btn" data-type="GREEDY">Greedy</button>
+            <button class="algo-btn" data-type="ASTAR">A*</button>
+            <button class="algo-btn" data-type="DIJKSTRA">DIJKSTRA</button>
           </div>
 
-          <button id="reset-btn" onclick="resetAll()">Reset</button>
+          <button id="reset-btn">Reset</button>
         </div>
 
         <div class="stats">
@@ -72,6 +68,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
